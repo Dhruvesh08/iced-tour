@@ -4,6 +4,8 @@ version = "0.1.0"
 authors = ["Héctor Ramón Jiménez <hector0193@gmail.com>"]
 edition = "2021"
 publish = false
+repository = "https://github.com/Dhruvesh08/iced-tour"
+homepage = "https://github.com/Dhruvesh08/iced-tour"
 
 [dependencies]
 iced = { version = "0.10",features = ["image", "debug"] }
