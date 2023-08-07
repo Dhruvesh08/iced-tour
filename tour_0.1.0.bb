@@ -7,11 +7,11 @@ inherit cargo
 
 # how to get tour could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/tour/0.1.0"
-SRC_URI += "git://github.com/Dhruvesh08/iced-tour.git;protocol=https;nobranch=1;branch=tour-wgpu"
-SRCREV = "27b08fa336fa3c01c7f0ee106add8e759ea524f2"
+SRC_URI += "git://github.com/Dhruvesh08/iced-tour.git;protocol=https;nobranch=1;branch=tour-tiny-skia"
+SRCREV = "ed884cc5a26799d16146bddcdb99079ab647a552"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+27b08fa336"
+PV:append = ".AUTOINC+ed884cc5a2"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
