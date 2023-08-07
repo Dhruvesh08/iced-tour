@@ -8,6 +8,6 @@ repository = "https://github.com/Dhruvesh08/iced-tour"
 homepage = "https://github.com/Dhruvesh08/iced-tour"
 
 [dependencies]
-iced = { version = "0.10",features = ["image", "debug"] }
+iced = { version = "0.10.0",features = ["image", "debug"] }
 env_logger = "0.10.0"
-iced_wgpu = "0.11.1"
+iced_tiny_skia = "0.1.0"
