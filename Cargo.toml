@@ -10,4 +10,4 @@ homepage = "https://github.com/Dhruvesh08/iced-tour"
 [dependencies]
 iced = { version = "0.10.0",features = ["image", "debug"] }
 env_logger = "0.10.0"
-iced_tiny_skia = "0.1.0"
+iced_glow = "0.8.0"

@@ -7,11 +7,11 @@ inherit cargo
 
 # how to get tour could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/tour/0.1.0"
-SRC_URI += "git://github.com/Dhruvesh08/iced-tour.git;protocol=https;nobranch=1;branch=tour-tiny-skia"
-SRCREV = "ed884cc5a26799d16146bddcdb99079ab647a552"
+SRC_URI += "git://github.com/Dhruvesh08/iced-tour.git;protocol=https;nobranch=1;branch=tour-glow"
+SRCREV = "84b629544d51147575458842cc27a368587e246f"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = ""
-PV:append = ".AUTOINC+ed884cc5a2"
+PV:append = ".AUTOINC+84b629544d"
 
 # please note if you have entries that do not begin with crate://
 # you must change them to how that package can be fetched
@@ -86,6 +86,7 @@ SRC_URI += " \
     crate://crates.io/fast-srgb8/1.0.0 \
     crate://crates.io/fastrand/1.9.0 \
     crate://crates.io/fdeflate/0.3.0 \
+    crate://crates.io/find-crate/0.6.3 \
     crate://crates.io/flate2/1.0.26 \
     crate://crates.io/flume/0.10.14 \
     crate://crates.io/fontdb/0.14.1 \
@@ -104,8 +105,14 @@ SRC_URI += " \
     crate://crates.io/getrandom/0.2.10 \
     crate://crates.io/gif/0.12.0 \
     crate://crates.io/gimli/0.27.3 \
+    crate://crates.io/glam/0.21.3 \
     crate://crates.io/glam/0.24.1 \
+    crate://crates.io/glow/0.11.2 \
     crate://crates.io/glow/0.12.3 \
+    crate://crates.io/glow_glyph/0.5.1 \
+    crate://crates.io/glyph_brush/0.7.7 \
+    crate://crates.io/glyph_brush_draw_cache/0.1.5 \
+    crate://crates.io/glyph_brush_layout/0.2.3 \
     crate://crates.io/glyphon/0.3.0 \
     crate://crates.io/gpu-alloc-types/0.2.0 \
     crate://crates.io/gpu-alloc/0.5.4 \
@@ -122,10 +129,16 @@ SRC_URI += " \
     crate://crates.io/humantime/2.1.0 \
     crate://crates.io/iced/0.10.0 \
     crate://crates.io/iced_core/0.10.0 \
+    crate://crates.io/iced_core/0.9.0 \
+    crate://crates.io/iced_futures/0.6.0 \
     crate://crates.io/iced_futures/0.7.0 \
+    crate://crates.io/iced_glow/0.8.0 \
+    crate://crates.io/iced_graphics/0.8.0 \
     crate://crates.io/iced_graphics/0.9.0 \
+    crate://crates.io/iced_native/0.10.3 \
     crate://crates.io/iced_renderer/0.1.0 \
     crate://crates.io/iced_runtime/0.1.1 \
+    crate://crates.io/iced_style/0.8.0 \
     crate://crates.io/iced_style/0.9.0 \
     crate://crates.io/iced_tiny_skia/0.1.0 \
     crate://crates.io/iced_wgpu/0.11.1 \
@@ -150,6 +163,7 @@ SRC_URI += " \
     crate://crates.io/libloading/0.7.4 \
     crate://crates.io/libloading/0.8.0 \
     crate://crates.io/libm/0.2.7 \
+    crate://crates.io/linked-hash-map/0.5.6 \
     crate://crates.io/linux-raw-sys/0.4.5 \
     crate://crates.io/lock_api/0.4.10 \
     crate://crates.io/log/0.4.19 \
@@ -194,8 +208,11 @@ SRC_URI += " \
     crate://crates.io/object/0.31.1 \
     crate://crates.io/once_cell/1.18.0 \
     crate://crates.io/orbclient/0.3.46 \
+    crate://crates.io/ordered-float/3.7.0 \
     crate://crates.io/owned_ttf_parser/0.19.0 \
+    crate://crates.io/palette/0.6.1 \
     crate://crates.io/palette/0.7.2 \
+    crate://crates.io/palette_derive/0.6.1 \
     crate://crates.io/palette_derive/0.7.2 \
     crate://crates.io/parking_lot/0.11.2 \
     crate://crates.io/parking_lot/0.12.1 \
@@ -240,6 +257,7 @@ SRC_URI += " \
     crate://crates.io/scoped-tls/1.0.1 \
     crate://crates.io/scopeguard/1.2.0 \
     crate://crates.io/sctk-adwaita/0.5.4 \
+    crate://crates.io/serde/1.0.183 \
     crate://crates.io/simd-adler32/0.3.7 \
     crate://crates.io/siphasher/0.3.10 \
     crate://crates.io/slab/0.4.8 \
@@ -268,6 +286,7 @@ SRC_URI += " \
     crate://crates.io/tiny-skia/0.8.4 \
     crate://crates.io/tinyvec/1.6.0 \
     crate://crates.io/tinyvec_macros/0.1.1 \
+    crate://crates.io/toml/0.5.11 \
     crate://crates.io/toml_datetime/0.6.3 \
     crate://crates.io/toml_edit/0.19.14 \
     crate://crates.io/ttf-parser/0.19.1 \
@@ -341,6 +360,7 @@ SRC_URI += " \
     crate://crates.io/x11rb/0.11.1 \
     crate://crates.io/x11rb/0.9.0 \
     crate://crates.io/xcursor/0.3.4 \
+    crate://crates.io/xi-unicode/0.3.0 \
     crate://crates.io/xml-rs/0.8.16 \
     crate://crates.io/yazi/0.1.6 \
     crate://crates.io/zeno/0.2.2 \
